@@ -25,5 +25,6 @@ public class Converter {
         int out1 = (int) rubleToDollar(in);
         boolean passed1 = ecpeted1 == out;
         System.out.println("250 rubles are 2. Test result : " + passed1);
+
     }
 }
