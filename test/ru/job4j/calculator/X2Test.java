@@ -8,7 +8,7 @@ import org.junit.Test;
 public class X2Test {
 
     @Test
-    public void whenBCZero1() {
+    public void whenBCZero() {
         int a = 10;
         int b = 0;
         int c = 0;
@@ -19,7 +19,7 @@ public class X2Test {
     }
 
     @Test
-    public void whenBCZero2() {
+    public void whenAllOne() {
         int a = 1;
         int b = 1;
         int c = 1;
@@ -29,7 +29,7 @@ public class X2Test {
         assertThat(rsl, is(expected));
     }
     @Test
-    public void whenBCZero3() {
+    public void whenAZero() {
         int a = 0;
         int b = 1;
         int c = 1;
@@ -39,7 +39,7 @@ public class X2Test {
         assertThat(rsl, is(expected));
     }
     @Test
-    public void whenBCZero4() {
+    public void whenCZero() {
         int a = 1;
         int b = 1;
         int c = 0;
@@ -49,7 +49,7 @@ public class X2Test {
         assertThat(rsl, is(expected));
     }
     @Test
-    public void whenBCZero5() {
+    public void whenXZero() {
         int a = 1;
         int b = 1;
         int c = 1;
