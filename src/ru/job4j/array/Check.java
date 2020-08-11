@@ -9,7 +9,6 @@ public class Check {
                 break;
             }
         }
-        System.out.println(result);
         return result;
     }
 }
