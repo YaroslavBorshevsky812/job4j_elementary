@@ -21,16 +21,6 @@ public class Turn {
             return array;
         }
 
-        public static void main (String[] args){
-            int mass[] = {1, 2, 3, 4, 5};
-            int mass1[] = {1, 2, 3, 4};
-
-
-            System.out.println("");
-            back(mass);
-            System.out.println("");
-            back(mass1);
-        }
     }
 
 
