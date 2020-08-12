@@ -5,16 +5,11 @@ public class ArrayChar {
     public static boolean startsWith(char[] word, char[] pref) {
         boolean result = true;
 
-        if (word != pref){
-            result = false;
+        for (int i = 0; i < word.length && i < pref.length; i++) {
+                if (word[i] != pref[i]) {
+                    result = false;
+                }
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        char[] word = {'П', 'Р', 'Е'};
-        char[] pref = {'П', 'Р', 'Е'};
-
-        System.out.println(startsWith(word, pref));
     }
 }
