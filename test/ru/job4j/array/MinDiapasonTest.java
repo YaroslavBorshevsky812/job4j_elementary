@@ -32,8 +32,8 @@ public class MinDiapasonTest {
     public void whenMiddleMin() {
         assertThat(
                 MinDiapason.findMin(
-                        new int[] {10, 2, 5, 1},
-                        0, 2
+                        new int[] {5, 3, 2, 4},
+                        0, 3
                 ),
                 is(2)
         );
