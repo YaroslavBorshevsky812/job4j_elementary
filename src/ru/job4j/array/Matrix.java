@@ -9,18 +9,14 @@ public class Matrix {
         int x = 1;
         for (int i = 0; i < table.length; i++) {
             for (int j = 0; j < table[i].length; j++) {
-                table[i][j] = k * x;
-                k++;
+                table[i][j] = (i + 1) * (j + 1);
                 System.out.print(table[i][j] + " ");
-                if (j == table[i].length - 1){
-                    k = 1;
-                }
             }
-            x++;
             System.out.println();
         }
         return table;
     }
+
 
     public static void main(String[] args) {
         multiple(10);
