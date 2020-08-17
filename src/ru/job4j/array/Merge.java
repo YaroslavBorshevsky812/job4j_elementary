@@ -3,37 +3,29 @@ package ru.job4j.array;
 public class Merge {
     public static int[] merge(int[] left, int[] right) {
         int[] rsl = new int[left.length + right.length];
-        int buf1 = 0;
-        int buf2 = 0;
         int min = left[0];
+        int buf = 0;
+        int buf1 = 0;
         int min1 = right[0];
 
         for (int index = 0; index < rsl.length; index++) {
 
+
             for (int i = 1; i < left.length; i++) {
                 if (left[i] < min) {
                     min = left[i];
-                    buf1 = left[i];
-                } else {
-                    buf1 = min;
                 }
             }
-
-            for (int j = 1; j < right.length; j++) {
-                if (right[j] < min1) {
-                    min1 = right[j];
-                    buf2 = right[j];
-                } else {
-                    buf2 = min1;
+            for (int i = 1; i < right.length; i++) {
+                if (right[i] < min1) {
+                    min1 = right[i];
                 }
             }
-
-            if (buf1 < buf2){
-                rsl[index] = buf1;
+            if (min < min1){
+                rsl[index] = min;
             } else {
-                rsl[index] = buf2;
+                rsl[index] = min1;
             }
-            System.out.println("сравниваю" + buf1 + "и" + buf2);
         }
 
         for (int i = 0; i < rsl.length; i++) {
