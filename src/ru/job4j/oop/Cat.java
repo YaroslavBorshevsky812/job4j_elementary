@@ -2,8 +2,8 @@ package ru.job4j.oop;
 
 public class Cat {
 
-        String name;
-        String food;
+        private String name;
+        private String food;
 
 
     public void eat(String meat) {
@@ -14,7 +14,6 @@ public class Cat {
     }
     public void show() {
         System.out.println("There are " + name + "'s food " + food);
-
     }
 
 
@@ -23,5 +22,6 @@ public class Cat {
             peppy.food = "Котлета";
             peppy.name = "black";
             peppy.show();
+
     }
 }
