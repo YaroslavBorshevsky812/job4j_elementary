@@ -19,8 +19,8 @@ public class Cat {
 
     public static void main(String[] args) {
         Cat peppy  = new Cat();
-            peppy.food = "Котлета";
-            peppy.name = "black";
+            peppy.eat("котлета");
+            peppy.giveNick("Black");
             peppy.show();
 
     }
