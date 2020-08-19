@@ -9,7 +9,6 @@ public class CheckPrimeNumber {
         prime = false;
     }
         for (int i = 2; i < number-1; i++){
-
             if ((number % i) == 0){
                 prime = false;
                 break;
@@ -17,7 +16,6 @@ public class CheckPrimeNumber {
         }
         return prime;
     }
-
     public static void main(String[] args) {
         System.out.println(check(4));
     }

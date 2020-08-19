@@ -1,11 +1,8 @@
 package ru.job4j.oop;
 
 public class Cat {
-
         private String name;
         private String food;
-
-
     public void eat(String meat) {
         this.food = meat;
     }
@@ -15,13 +12,10 @@ public class Cat {
     public void show() {
         System.out.println("There are " + name + "'s food " + food);
     }
-
-
     public static void main(String[] args) {
         Cat peppy  = new Cat();
             peppy.eat("котлета");
             peppy.giveNick("Black");
             peppy.show();
-
     }
 }
