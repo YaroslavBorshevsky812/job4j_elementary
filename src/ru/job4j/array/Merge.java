@@ -1,44 +1,35 @@
 package ru.job4j.array;
 
+import java.util.Arrays;
+
 public class Merge {
-    public static int[] merge(int[] left, int[] right) {
+
+    public int[] merge(int[] left, int[] right) {
         int[] rsl = new int[left.length + right.length];
-        int min = left[0];
-        int buf = 0;
-        int buf1 = 0;
-        int min1 = right[0];
-
-        for (int index = 0; index < rsl.length; index++) {
-
-
-            for (int i = 1; i < left.length; i++) {
-                if (left[i] < min) {
-                    min = left[i];
-                }
-            }
-            for (int i = 1; i < right.length; i++) {
-                if (right[i] < min1) {
-                    min1 = right[i];
-                }
-            }
-            if (min < min1){
-                rsl[index] = min;
+        int leftPoint = 0;
+        int rightPoint = 0;
+        int rslPoint = 0;
+        while (leftPoint + rightPoint != rsl.length) {
+            if (leftPoint != left.length && rightPoint != right.length) {
+                rsl[rslPoint++] = left[leftPoint] < right[rightPoint] ? left[leftPoint++] : right[rightPoint++];
+            } else if (leftPoint != left.length) {
+                rsl[rslPoint++] = left[leftPoint++];
             } else {
-                rsl[index] = min1;
+                rsl[rslPoint++] = right[rightPoint++];
             }
-        }
-
-        for (int i = 0; i < rsl.length; i++) {
-            System.out.print(rsl[i]);
         }
         return rsl;
     }
 
     public static void main(String[] args) {
-        int one[] = {3, 1, 2, 5, 4};
-        int two [] = {7, 6, 10, 8, 9};
-        merge(one, two);
+        Merge process = new Merge();
+        int[] rsl = process.merge(
+                new int[] {1, 3, 5},
+                new int[] {2, 4}
+        );
+        System.out.println(Arrays.toString(rsl));
     }
-
 }
+
+
 
