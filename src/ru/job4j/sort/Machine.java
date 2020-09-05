@@ -7,20 +7,19 @@ public class Machine {
 
     public int[] change(int money, int price) {
         int[] rsl = new int[100];
-        int size = money - price;
+        int size = 0;
+        int sum = money - price;
         int index = 0;
-        int index1 = 0;
-            while (size != 0) {
-                for (coins[index1] < rsl[index] && coins[index1] > coins[index + 1]) {
-                    rsl[index] = coins[index1];
-                    size = size - coins[index1];
-                    index++;
-                    if (coins[index1] >= rsl[index]){
-                        index1++;
-                    }
-                }
+        while (sum != 0) {
+            if (sum >= coins[index]) {
+                rsl[index] = coins[index];
+                sum = sum - coins[index];
+                size++;
+            } else {
+                index++;
             }
-
-        return Arrays.copyOf(rsl, size);
+        }
+            return Arrays.copyOf(rsl, size);
+        }
     }
-}
+
