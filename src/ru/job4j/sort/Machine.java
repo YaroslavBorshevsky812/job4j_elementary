@@ -12,7 +12,7 @@ public class Machine {
         int index = 0;
         while (sum != 0) {
             if (sum >= coins[index]) {
-                rsl[index] = coins[index];
+                rsl[size] = coins[index];
                 sum = sum - coins[index];
                 size++;
             } else {
@@ -21,5 +21,6 @@ public class Machine {
         }
             return Arrays.copyOf(rsl, size);
         }
-    }
+}
+
 
